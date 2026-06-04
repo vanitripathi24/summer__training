@@ -1,0 +1,218 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #f8fafc,
+        #dbeafe
+    );
+
+    margin: 0;
+    padding: 20px;
+
+    color: #1f2937;
+}
+
+
+header{
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+h1{
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+}
+
+header p{
+
+    font-size: 18px;
+}
+
+
+
+nav{
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+nav a{
+
+    text-decoration: none;
+
+    color: #1e3a8a;
+
+    font-weight: bold;
+
+    margin: 15px;
+
+    transition: 0.3s;
+}
+
+nav a:hover{
+
+    color: #2563eb;
+}
+
+
+
+.card{
+
+    background: rgba(255,255,255,0.85);
+
+    backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255,255,255,0.5);
+
+    border-radius: 15px;
+
+    width: 80%;
+
+    margin: 25px auto;
+
+    padding: 25px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+
+
+.card:hover{
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+
+h2{
+
+    border-left: 5px solid #2563eb;
+
+    padding-left: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+
+ul,
+ol{
+
+    line-height: 1.8;
+}
+
+
+
+form{
+
+    margin-top: 20px;
+}
+
+label{
+
+    font-weight: bold;
+}
+
+
+
+input,
+textarea,
+select{
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 6px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    box-sizing: border-box;
+}
+
+
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline: none;
+
+    border: 2px solid #2563eb;
+
+    box-shadow: 0 0 8px rgba(37,99,235,0.3);
+}
+
+
+
+button{
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+button:hover{
+
+    transform: scale(1.05);
+
+    background: #1d4ed8;
+}
+
+
+
+footer{
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    padding: 20px;
+}
+
+
+
+img{
+
+    width: 180px;
+
+    border-radius: 50%;
+
+    display: block;
+
+    margin: 20px auto;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
