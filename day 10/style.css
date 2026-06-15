@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f4f4f4;
+    font-family:Arial, sans-serif;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+}
+
+.profile-card{
+    background:white;
+    width:350px;
+    padding:25px;
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+.profile-image{
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin-bottom:15px;
+}
+
+.name{
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.course{
+    color:gray;
+    margin-bottom:15px;
+}
+
+.about{
+    margin-bottom:15px;
+    line-height:1.5;
+}
+
+.skills-title{
+    margin-bottom:10px;
+}
+
+.skills{
+    list-style:none;
+    margin-bottom:20px;
+}
+
+.skills li{
+    background:#e8e8e8;
+    margin:5px 0;
+    padding:8px;
+    border-radius:8px;
+}
+
+.contact-btn{
+    background:black;
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+}
+
+.contact-btn:hover{
+    opacity:0.8;
+}
