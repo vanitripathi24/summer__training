@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="top-bar">
+            <h1>🌦 Weather Dashboard </h1>
+
+            <button id="themeBtn">
+                🌙 Dark Mode
+            </button>
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter City Name"
+            >
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+        </div>
+
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Fetching Weather...</p>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+        <div id="weatherCard" class="weather-card hidden">
+
+            <h2 id="cityName">City</h2>
+
+            <p id="country"></p>
+
+            <p id="dateTime"></p>
+
+            <img
+                id="weatherIcon"
+                src=""
+                alt="Weather Icon"
+            >
+
+            <h3>
+                🌡 Temperature:
+                <span id="temp">0</span>°C
+            </h3>
+
+            <p>
+                🤔 Feels Like:
+                <span id="feelsLike">0</span>°C
+            </p>
+
+            <p>
+                💧 Humidity:
+                <span id="humidity">0</span>%
+            </p>
+
+            <p>
+                🌬 Wind:
+                <span id="wind">0</span> m/s
+            </p>
+
+            <p>
+                📊 Pressure:
+                <span id="pressure">0</span> hPa
+            </p>
+
+            <p>
+                ☁ Condition:
+                <span id="condition"></span>
+            </p>
+
+            <p>
+                🌅 Sunrise:
+                <span id="sunrise"></span>
+            </p>
+
+            <p>
+                🌇 Sunset:
+                <span id="sunset"></span>
+            </p>
+
+        </div>
+
+        <div class="history">
+
+            <h3>Recent Searches</h3>
+
+            <ul id="historyList"></ul>
+
+        </div>
+
+    </div>
+
+    <footer>
+        Developed by Vani • Day 13 Project
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
