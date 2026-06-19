@@ -1,7 +1,8 @@
-function Header() {
+function Header({ title = "Day 14: React Hooks" }) {
   return (
-    <header>
-      <h1>My React App</h1>
+    <header style={{ textAlign: "center", padding: "20px" }}>
+      <h1>{title}</h1>
+      <p>Props • useState • useEffect</p>
     </header>
   );
 }
