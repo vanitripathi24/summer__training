@@ -1,0 +1,267 @@
+.navbar-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+}
+
+/* Top bar */
+.navbar-topbar {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  text-transform: uppercase;
+}
+
+.navbar-topbar span {
+  color: #fff;
+}
+
+/* Main nav */
+.navbar-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 60px;
+  border-bottom: 1px solid #e0e0e0;
+  background: #fff;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-logo svg {
+  width: 36px;
+  height: 36px;
+}
+
+/* Desktop nav links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 4px;
+}
+
+.nav-item {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 14px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.nav-link:hover,
+.nav-item:hover .nav-link {
+  border-bottom: 2px solid #000;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #000;
+}
+
+/* Sale link highlight */
+.nav-link.sale-link {
+  color: #e00;
+}
+
+.nav-link.sale-link:hover {
+  border-bottom: 2px solid #e00;
+}
+
+/* Dropdown */
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 220px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-top: 2px solid #000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: all 0.2s ease;
+  z-index: 200;
+}
+
+.nav-item:hover .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-link {
+  display: block;
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.15s;
+}
+
+.nav-dropdown-link:last-child {
+  border-bottom: none;
+}
+
+.nav-dropdown-link:hover {
+  background: #f5f5f5;
+  font-weight: 700;
+}
+
+/* Right icons */
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.15s;
+  color: #000;
+  position: relative;
+}
+
+.navbar-icon-btn:hover {
+  background: #f5f5f5;
+}
+
+.navbar-icon-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.cart-count {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: #000;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Search bar */
+.navbar-search-bar {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #000;
+  padding: 4px 16px 4px 0;
+  gap: 8px;
+}
+
+.navbar-search-bar input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 200px;
+  font-family: inherit;
+}
+
+/* Mobile hamburger */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.navbar-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #000;
+  transition: all 0.2s;
+}
+
+/* Mobile menu */
+.navbar-mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  border-top: 1px solid #e0e0e0;
+  padding: 16px 0;
+}
+
+.navbar-mobile-menu.open {
+  display: flex;
+}
+
+.mobile-nav-link {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-nav-link.sale {
+  color: #e00;
+}
+
+@media (max-width: 900px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-hamburger {
+    display: flex;
+  }
+  .navbar-mobile-menu {
+    display: none;
+  }
+  .navbar-mobile-menu.open {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-topbar {
+    font-size: 10px;
+  }
+}
