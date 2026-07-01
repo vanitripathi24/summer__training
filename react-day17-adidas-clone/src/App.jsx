@@ -1,30 +1,43 @@
-import Navbar from "./components/Navbar";
-import PageHeader from "./components/PageHeader";
-import CategoryCards from "./components/CategoryCards";
-import FilterBar from "./components/FilterBar";
-import ProductGrid from "./components/ProductGrid";
-import Footer from "./components/Footer";
-import Feedback from "./components/Feedback";
+import {
+  Routes,
+  Route,
+  Navigate
+} from "react-router-dom";
 
-import "./App.css";
+import Home from "./pages/home/Home";
+import About from "./pages/About/About";
+import Product from "./pages/Product/Product";
 
 function App() {
+
   return (
-    <>
-      <Navbar />
 
-      <PageHeader />
+    <Routes>
 
-      <CategoryCards />
+      <Route
+        path="/"
+        element={
+          <Navigate to="/home" />
+        }
+      />
 
-      <FilterBar />
+      <Route
+        path="/home"
+        element={<Home />}
+      />
 
-      <ProductGrid />
+      <Route
+        path="/about"
+        element={<About />}
+      />
 
-      <Feedback />
+      <Route
+        path="/product/:product_id"
+        element={<Product />}
+      />
 
-      <Footer />
-    </>
+    </Routes>
+
   );
 }
 

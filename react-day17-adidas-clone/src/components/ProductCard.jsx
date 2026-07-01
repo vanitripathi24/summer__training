@@ -1,27 +1,26 @@
-import { FaRegHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-function ProductCard({
-  image,
-  name,
-  price,
-}) {
+function ProductCard({ product }) {
   return (
     <div className="product-card">
 
-      <div className="image-container">
+      <img
+        src={product.thumbnail}
+        alt={product.title}
+        width="250"
+      />
 
-        <FaRegHeart className="heart-icon" />
+      <h3>{product.title}</h3>
 
-        <img
-          src={image}
-          alt={name}
-        />
+      <p>₹ {product.price}</p>
 
-      </div>
+      <p>⭐ {product.rating}</p>
 
-      <h3>{name}</h3>
-
-      <h4>{price}</h4>
+      <Link
+        to={`/product/${product.id}`}
+      >
+        View Product
+      </Link>
 
     </div>
   );

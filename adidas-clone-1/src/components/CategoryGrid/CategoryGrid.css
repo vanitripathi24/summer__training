@@ -1,0 +1,134 @@
+.category-section {
+  max-width: 1400px;
+  margin: 64px auto 0;
+  padding: 0 24px;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.section-link {
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: underline;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: opacity 0.15s;
+}
+
+.section-link:hover {
+  opacity: 0.6;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.category-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 3 / 4;
+  text-decoration: none;
+  display: block;
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.06);
+}
+
+.category-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
+  transition: opacity 0.3s;
+}
+
+.category-card:hover .category-card-overlay {
+  opacity: 0.85;
+}
+
+.category-card-content {
+  position: absolute;
+  bottom: 24px;
+  left: 20px;
+  right: 20px;
+  color: #fff;
+}
+
+.category-card-content h3 {
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  line-height: 1.1;
+}
+
+.category-card-content p {
+  font-size: 12px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.category-shop-btn {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 8px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.category-card:hover .category-shop-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .category-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .category-section {
+    padding: 0 12px;
+  }
+  .category-card-content h3 {
+    font-size: 14px;
+  }
+}

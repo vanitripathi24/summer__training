@@ -1,10 +1,19 @@
+import { useState } from "react";
 import {
   FaRegHeart,
   FaShoppingBag,
   FaUser,
 } from "react-icons/fa";
 
-function Navbar() {
+import MegaMenu from "./MegaMenu";
+
+function NavBar({
+  searchTerm,
+  setSearchTerm,
+}) {
+  const [showMenu, setShowMenu] =
+    useState(false);
+
   return (
     <>
       <div className="top-strip">
@@ -28,18 +37,35 @@ function Navbar() {
         </div>
 
         <div className="nav-links">
-          <a className="sale">END OF SEASON SALE</a>
+          <a className="sale">
+            END OF SEASON SALE
+          </a>
+
           <a>SHOES</a>
-          <a>MEN</a>
+
+          <a
+            onMouseEnter={() =>
+              setShowMenu(true)
+            }
+          >
+            MEN
+          </a>
+
           <a>WOMEN</a>
+
           <a>KIDS</a>
+
           <a>SPORTS & LIFESTYLE</a>
         </div>
 
         <div className="nav-icons">
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Search Products"
+            value={searchTerm}
+            onChange={(e) =>
+              setSearchTerm(e.target.value)
+            }
           />
 
           <div className="icon-wrapper">
@@ -55,8 +81,15 @@ function Navbar() {
           </div>
         </div>
       </nav>
+
+      <MegaMenu
+        visible={showMenu}
+        onClose={() =>
+          setShowMenu(false)
+        }
+      />
     </>
   );
 }
 
-export default Navbar;
+export default NavBar;
