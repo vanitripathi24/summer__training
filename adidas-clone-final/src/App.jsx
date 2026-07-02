@@ -1,23 +1,42 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { CartProvider } from './context/CartContext';
-import Home from './pages/Home/Home';
-import Product from './pages/Product/Product';
-import About from './pages/About/About';
-import Cart from './pages/Cart/Cart';
+import { useSelector, useDispatch } from "react-redux";
+import { toggleTheme } from "./features/theme/themeSlice";
 
 function App() {
+  const theme = useSelector(
+    (state) => state.theme.mode
+  );
+
+  const dispatch = useDispatch();
+
   return (
-    <CartProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/product/:product_id" element={<Product />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </BrowserRouter>
-    </CartProvider>
+    <div
+      style={{
+        backgroundColor:
+          theme === "light"
+            ? "white"
+            : "black",
+
+        color:
+          theme === "light"
+            ? "black"
+            : "white",
+
+        minHeight: "100vh",
+        padding: "30px",
+      }}
+    >
+      <h1>Redux Toolkit Demo</h1>
+
+      <h2>Current Theme: {theme}</h2>
+
+      <button
+        onClick={() =>
+          dispatch(toggleTheme())
+        }
+      >
+        Toggle Theme
+      </button>
+    </div>
   );
 }
 
